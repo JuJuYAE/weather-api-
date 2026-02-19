@@ -1,0 +1,6 @@
+openmeteo_requests==1.7.5
+pandas==3.0.1
+python-dotenv==1.2.1
+python-telegram-bot==22.6
+requests_cache==1.3.0
+retry_requests==2.0.0
