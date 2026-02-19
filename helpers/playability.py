@@ -79,10 +79,10 @@ def session_score(row) -> int:
         code_penalty = 0.60
 
     raw = (
-        0.35 * temp +
-        0.25 * pop +
+        0.30 * temp +
+        0.40 * pop +
         0.20 * wind +
-        0.20 * gust
+        0.10 * gust
     )
 
     raw = raw - 0.45 * rain_penalty - code_penalty

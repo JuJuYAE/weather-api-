@@ -14,11 +14,11 @@ def sky_emoji(weather_code: int) -> str:
     if wc == 3:
         return "☁️"
     if wc in (45, 48):
-        return "🌫️"
+        return "😶‍🌫️"
     if 51 <= wc <= 57:
         return "🌦️"   # drizzle
     if 61 <= wc <= 67:
-        return "☔"    # rain
+        return "🌧️"    # rain
     if 71 <= wc <= 77:
         return "❄️"    # snow
     if 95 <= wc <= 99:
@@ -27,11 +27,8 @@ def sky_emoji(weather_code: int) -> str:
 
 
 def status_emoji(label: str, score: int, is_best: bool) -> str:
-    # "best day" gets the 🔥 crown treatment
     if is_best:
         return "🔥"
-    if label == "playable" and score >= 75:
-        return "✅"
     if label == "playable":
         return "✅"
     if label == "maybe":
@@ -40,12 +37,12 @@ def status_emoji(label: str, score: int, is_best: bool) -> str:
 
 
 def add_wind_emoji(wind_speed: float, gusts: float) -> str:
-    return "🌬️" if (wind_speed >= 18 or gusts >= 40) else ""
+    return "💨" if (wind_speed >= 18 or gusts >= 40) else ""
 
 
 def add_rain_emoji(rain: float, pop: float, weather_code: int) -> str:
     if rain > 0.1:
-        return "☔"
+        return "🌧️"
     if pop >= 30 or (51 <= int(weather_code) <= 57):
         return "🌦️"
     return ""
