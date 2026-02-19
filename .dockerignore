@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.cache.sqlite
+.ipynb_checkpoints/
+*.ipynb
+.git/
+.gitignore
